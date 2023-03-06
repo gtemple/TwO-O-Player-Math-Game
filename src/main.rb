@@ -14,13 +14,16 @@ def play_game
   new_game = Game.new
   game_over = false
 
-  current_turn = player_1
+  current_player = player_1
 
   while game_over == false
     puts "---- NEW TURN ----"
-    puts "#{current_turn.name}, you're up!"
-    update_score(player_1, new_game)
+    puts "#{current_player.name}, you're up!"
+    update_score(current_player, new_game)
     game_over = check_score(player_1, player_2)
+    current_player == player_1 ?
+      current_player = player_2 :
+      current_player = player_1
   end
 end
 

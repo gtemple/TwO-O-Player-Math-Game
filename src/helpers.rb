@@ -14,11 +14,11 @@ def check_score(player_1, player_2)
   puts "P1:#{player_1.score}/3 vs P2:#{player_2.score}/3"
   if player_1.score == 0
     puts "Player 2 wins with a score of #{player_2.score}"
-    true
+    exit
   end
   if player_2.score == 0
     puts "Player 1 wins with a score of #{player_1.score}"
-    true
+    exit
   end
   false
 end
